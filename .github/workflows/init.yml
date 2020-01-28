@@ -1,8 +1,5 @@
 name: init
-on:
-  create:
-    branches:
-      - master
+on: create
 jobs:
   init:
     runs-on: ubuntu-latest
