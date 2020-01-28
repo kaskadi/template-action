@@ -1,4 +1,4 @@
-![](https://img.shields.io/github/workflow/status/kaskadi/template-action/update?label=updated&logo=npm)
+![](https://img.shields.io/github/workflow/status/kaskadi/template-action/update?label=dependencies%20updated&logo=npm)
 
 **CodeClimate**
 
@@ -8,7 +8,7 @@
 
 **LGTM**
 
-[![](https://img.shields.io/lgtm/grade/javascript/github/kaskadi/template-action?logo=lgtm)](https://lgtm.com/projects/g/kaskadi/template-action/?mode=list)
+[![](https://img.shields.io/lgtm/grade/javascript/github/kaskadi/template-action?label=code%20quality&logo=lgtm)](https://lgtm.com/projects/g/kaskadi/template-action/?mode=list)
 
 ***
 
