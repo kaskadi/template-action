@@ -16,7 +16,7 @@
 
 # What is this action for?
 
-**Describe here what the action should do**
+:point_right: **Describe here what the action should do** :point_left:
 
 # How to use it?
 
@@ -34,6 +34,6 @@ jobs:
       uses: kaskadi/template-action@master
 ```
 
-**Here goes any extra details on how to use the action (environment variables/inputs description for example)**
+:point_down: **Here goes any extra details on how to use the action (environment variables/inputs description for example)** :point_down:
 
 **Note:** everything contained in single curly brackets (`{ }`) needs to be replaced by your desired values
