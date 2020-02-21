@@ -8,7 +8,7 @@ then
   ./node_modules/.bin/kaskadi init action
   npm rm kaskadi-cli
   # Delete last line of .gitignore to stop ignoring node_modules
-  dd if=/dev/null of=.gitignore bs=1 seek=$(echo $(stat --format=%s .gitignore ) - $( tail -n1 .gitignore | wc -c) | bc )
+  dd if=/dev/null of=.gitignore bs=1 seek=$(echo $(stat --format=%s .gitignore ) - $( tail -n2 .gitignore | wc -c) | bc )
   # Commit files
   if [ "$GITHUB_ACTOR" == "alexlemaire" ]
   then
