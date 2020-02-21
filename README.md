@@ -30,6 +30,12 @@ It is known that this action sometimes does not run (see [here](https://github.c
 
 ****
 
+# Testing
+
+`mocha`, `chai` & `standard` are available as dev dependencies.
+
+****
+
 **This action is updating its dependencies every Sunday at 7AM CET**
 
 # What is this action for?
