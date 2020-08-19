@@ -1,6 +1,6 @@
 #!/bin/bash
-BRANCH_NAME="$(node -e "const refs = process.env.GITHUB_REF.split('/'); console.log(refs[refs.length - 1])")"
-if [ "$BRANCH_NAME" == "master" ]
+FIRST_COMMIT_SHA="$(git rev-list --max-parents=0 HEAD)"
+if [ "$FIRST_COMMIT_SHA" == "$GITHUB_SHA" ]
 then
   # Install kaskadi-cli
   npm i kaskadi-cli
@@ -26,5 +26,5 @@ then
   git commit -am "Initialized repository with correct naming"
   git push
 else
-  echo "Branch is not master, not proceeding to initialize repository."
+  echo "Pushed commit is not initial commit, not proceeding to initialize repository."
 fi
