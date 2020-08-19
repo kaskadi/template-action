@@ -1,5 +1,5 @@
 name: init
-on: create
+on: push
 jobs:
   init:
     runs-on: ubuntu-latest
