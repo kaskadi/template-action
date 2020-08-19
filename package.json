@@ -35,5 +35,6 @@
       "html"
     ],
     "report-dir": "./coverage"
-  }
+  },
+  "dependencies": {}
 }
