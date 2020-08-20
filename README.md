@@ -18,8 +18,6 @@
 
 ****
 
-**This action is updating its dependencies every Sunday at 7AM CET**
-
 # What is this action for?
 
 :point_right: **Describe here what the action should do** :point_left:
