@@ -2,7 +2,7 @@
   "name": "template-action",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "action.yml",
   "scripts": {
     "test": "standard --fix && mocha test/*.test.js --require test/mocha-color-setter.js",
     "coverage": "nyc npm run test"
