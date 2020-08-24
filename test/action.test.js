@@ -1,6 +1,9 @@
 /* eslint-env mocha */
 const runAction = require('./helpers/run-action.js')
 const steps = ['pre', 'main', 'post']
+const fs = require('fs')
+const rimraf = require('rimraf')
+const { spawnSync } = require('child_process')
 const chai = require('chai')
 const { assert } = require('chai')
 chai.should()
@@ -8,18 +11,32 @@ chai.should()
 // *************
 // Write your tests here
 describe('template-action', function () {
-  // this.timeout(10000)
-  // uncomment this if you want to raise the timeout cap for your whole test (when you need to perform long async tasks). You can also follow the same logic per describe block or per it block to increase the timeout cap
-  // if your describe/it callbacks are arrow functions, you need to use the following syntax: describe('...', () => {}).timeout(...) but be aware that this won't apply to hooks!
+  this.timeout(60000)
 
-  // ******* Example tests
-  before(async function () {
-    await runAction(steps)
+  // ******* DO NOT REMOVE THIS TEST!
+  describe('pre step', function () {
+    before(async function () {
+      rimraf.sync('node_modules')
+      await runAction(['pre'])
+    })
+    it('should install the action dependencies', function () {
+      assert(fs.existsSync('node_modules'), 'No node_modules found...')
+    })
+    after(function () {
+      rimraf.sync('node_modules')
+      spawnSync('npm', ['i'], { stdio: 'inherit' })
+    })
   })
+  // *******
+
+  // ******* Example test
   describe('Placeholder test', function () {
+    before(async function () {
+      await runAction(steps)
+    })
     it('should pass', function () {
       const exp = true
-      assert(exp === true, 'True is true...')
+      assert(exp === true, 'This cannot fail!')
     })
   })
   // *******
