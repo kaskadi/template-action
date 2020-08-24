@@ -14,7 +14,7 @@ describe('template-action', function () {
 
   // ******* Example tests
   before(async function () {
-    await runAction(steps).catch(process.exit)
+    await runAction(steps)
   })
   describe('Placeholder test', function () {
     it('should pass', function () {
