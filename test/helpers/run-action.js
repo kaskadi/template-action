@@ -7,14 +7,18 @@ module.exports = (steps) => {
 }
 
 function runStep (step) {
-  try {
-    console.log(`INFO: running action ${step} step...`)
-    console.log(`\n************ ${step.toUpperCase()} STEP OUTPUT START ************\n`)
-    spawnSync('node', [`src/${step}`], { stdio: 'inherit' })
-    console.log(`\n************ ${step.toUpperCase()} STEP ACTION OUTPUT END ************\n`)
-  } catch (err) {
+  console.log(`INFO: running action ${step} step...`)
+  console.log(`\n************ ${step.toUpperCase()} STEP OUTPUT START ************\n`)
+  const exec = spawnSync('node', [`src/${step}`])
+  let { stdout, stderr } = exec
+  stdout = stdout.toString()
+  stderr = stderr.toString()
+  if (stderr.length > 0) {
     console.log(`ERROR: an error occured in ${step} step...`)
-    console.log(err)
+    console.log(stderr)
     process.exit()
+  } else {
+    console.log(stdout)
   }
+  console.log(`\n************ ${step.toUpperCase()} STEP ACTION OUTPUT END ************\n`)
 }
