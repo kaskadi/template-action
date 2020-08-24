@@ -14,10 +14,9 @@ function runStep (step) {
     proc.stdout.on('data', data => {
       console.log(data.toString().trim())
     })
-    proc.stderr.on('data', data => {
-      data = data.toString().trim()
-      console.log(data)
-      reject(data)
+    proc.on('error', err => {
+      console.log(err)
+      reject(err)
     })
     proc.on('close', resolve)
   })
