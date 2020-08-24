@@ -7,7 +7,7 @@ module.exports = async (steps) => {
 }
 
 function runStep (step) {
-  console.log(`INFO: running action ${step} step...\n`)
+  console.log(`************ running action ${step} step... ************\n`)
   const proc = spawn('node', [`src/${step}`])
   return new Promise((resolve, reject) => {
     proc.stdout.on('data', data => {
