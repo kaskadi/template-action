@@ -1,24 +1,23 @@
-const { spawnSync } = require('child_process')
+const { spawn } = require('child_process')
 
-module.exports = (steps) => {
+module.exports = async (steps) => {
   for (const step of steps) {
-    runStep(step)
+    await runStep(step)
   }
 }
 
 function runStep (step) {
-  console.log(`INFO: running action ${step} step...`)
-  console.log(`\n************ ${step.toUpperCase()} STEP OUTPUT START ************\n`)
-  const exec = spawnSync('node', [`src/${step}`])
-  let { stdout, stderr } = exec
-  stdout = stdout.toString()
-  stderr = stderr.toString()
-  if (stderr.length > 0) {
-    console.log(`ERROR: an error occured in ${step} step...`)
-    console.log(stderr)
-    process.exit()
-  } else {
-    console.log(stdout)
-  }
-  console.log(`\n************ ${step.toUpperCase()} STEP ACTION OUTPUT END ************\n`)
+  console.log(`INFO: running action ${step} step...\n`)
+  const proc = spawn('node', [`src/${step}`])
+  return new Promise((resolve, reject) => {
+    proc.stdout.on('data', data => {
+      console.log(data.toString())
+    })
+    proc.stderr.on('data', data => {
+      data = data.toString()
+      console.log(data)
+      reject(data)
+    })
+    proc.on('close', resolve)
+  })
 }

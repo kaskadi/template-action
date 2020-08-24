@@ -13,8 +13,8 @@ describe('template-action', function () {
   // if your describe/it callbacks are arrow functions, you need to use the following syntax: describe('...', () => {}).timeout(...) but be aware that this won't apply to hooks!
 
   // ******* Example tests
-  before(function () {
-    runAction(steps)
+  before(async function () {
+    await runAction(steps).catch(process.exit)
   })
   describe('Placeholder test', function () {
     it('should pass', function () {
