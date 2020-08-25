@@ -39,6 +39,22 @@ jobs:
       uses: kaskadi/template-action@master
 ```
 
-:point_down: **Here goes any extra details on how to use the action (environment variables/inputs description for example)** :point_down:
-
 **Note:** everything contained in single curly brackets (`{ }`) needs to be replaced by your desired values
+
+:point_down: **Placeholder for your inputs and environment description** :point_down:
+
+**Inputs:**
+|   Input   | Required |  Default  | Description   |
+|:---------:|:--------:|:---------:|---------------|
+| `input-1` |    No    | `default` | Description 1 |
+| `input-2` |    Yes   | `default` | Description 2 |
+| `input-3` |    No    | `default` | Description 3 |
+
+**Environment variables:**
+| Variable | Required | Description   |
+|:--------:|:--------:|---------------|
+|  `env-1` |    No    | Description 1 |
+|  `env-2` |    Yes   | Description 2 |
+|  `env-3` |    No    | Description 3 |
+
+:point_down: **Here goes any extra details on how to use the action** :point_down:
