@@ -50,6 +50,13 @@ jobs:
 | `input-2` |    Yes   | `default` | Description 2 |
 | `input-3` |    No    | `default` | Description 3 |
 
+**Outputs:**
+|   Output   | Description   |
+|:----------:|---------------|
+| `output-1` | Description 1 |
+|  `ouput-2` | Description 2 |
+| `output-3` | Description 3 |
+
 **Environment variables:**
 | Variable | Required | Description   |
 |:--------:|:--------:|---------------|
