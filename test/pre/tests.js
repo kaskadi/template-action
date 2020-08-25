@@ -13,7 +13,7 @@ describe('pre step', function () {
   beforeEach(function () {
     console.log('TEST INFO: removing dependencies before testing')
     for (const pkgDep of pkgDependencies) {
-      spawnSync('npm', ['rm', pkgDep], { stdio: 'inherit' })
+      spawnSync('npm', ['rm', '--no-save', pkgDep], { stdio: 'inherit' })
     }
   })
   it('should install the action dependencies when ran from action folder', async function () {
