@@ -19,15 +19,23 @@
 
 ****
 
+# Documentation
+
+This repository comes with a `generate-docs` workflow that generates documentation automatically for you based on your `action.yml`. See [here](https://github.com/kaskadi/action-generate-docs) and [there](../action.yml) for more information.
+
+If you would like to see the workflow configuration, head [here](../.github/workflows/generate-docs.yml).
+
+****
+
 # What is this action for?
 
-:point_right: **Describe here what the action should do** :point_left:
+template repository to create GitHub Actions
 
 # How to use it?
 
 You can use the following code as a new _GitHub Actions Workflow_:
 
-```
+```yaml
 name: {YOUR-ACTION-NAME}
 on: [{YOUR-ACTION-EVENT}]
 jobs:
@@ -37,31 +45,27 @@ jobs:
     - uses: actions/checkout@v2
     - name: {YOUR-STEP-NAME}
       uses: kaskadi/template-action@master
+      with:
+        input_1: {INPUT_1-VALUE}
+      env:
+        env_1: {ENV_1-VALUE}
 ```
 
 **Note:** everything contained in single curly brackets (`{ }`) needs to be replaced by your desired values
 
-:point_down: **Placeholder for your inputs and environment description** :point_down:
-
 **Inputs:**
-|   Input   | Required |  Default  | Description   |
-|:---------:|:--------:|:---------:|---------------|
-| `input-1` |    No    | `default` | Description 1 |
-| `input-2` |    Yes   | `default` | Description 2 |
-| `input-3` |    No    | `default` | Description 3 |
+|   Input   | Required |  Default  | Description      |
+| :-------: | :------: | :-------: | :--------------- |
+| `input_1` |  `false` | `default` | This is an input |
 
 **Outputs:**
-|   Output   | Description   |
-|:----------:|---------------|
-| `output-1` | Description 1 |
-|  `ouput-2` | Description 2 |
-| `output-3` | Description 3 |
+|   Output   | Description       |
+| :--------: | :---------------- |
+| `output_1` | This is an output |
 
 **Environment variables:**
-| Variable | Required | Description   |
-|:--------:|:--------:|---------------|
-|  `env-1` |    No    | Description 1 |
-|  `env-2` |    Yes   | Description 2 |
-|  `env-3` |    No    | Description 3 |
+| Variable | Required | Description                     |
+| :------: | :------: | :------------------------------ |
+|  `env_1` |  `true`  | This is an environment variable |
 
 :point_down: **Here goes any extra details on how to use the action** :point_down:
