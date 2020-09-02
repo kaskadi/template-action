@@ -21,9 +21,11 @@
 
 # Documentation
 
-This repository comes with a `generate-docs` workflow that generates documentation automatically for you based on your `action.yml`. See [here](https://github.com/kaskadi/action-generate-docs) and [there](../action.yml) for more information.
+This repository comes with a `generate-docs` workflow that generates documentation automatically for you based on your `action.yml`. See [here](https://github.com/kaskadi/action-generate-docs) and [there](./action.yml) for more information.
 
-If you would like to see the workflow configuration, head [here](../.github/workflows/generate-docs.yml).
+If you would like to see the workflow configuration, head [here](./.github/workflows/generate-docs.yml).
+
+You can configure the template used to generate the action documentation [here](./docs/template.md)
 
 ****
 
