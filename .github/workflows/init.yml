@@ -6,6 +6,10 @@ jobs:
     if: github.repository != 'kaskadi/template-action'
     steps:
     - uses: actions/checkout@v2
+    - name: test
+      run: echo $EVENT
+      env:
+        EVENT: ${{ github.event }}
     - name: Import GPG key for kaskadi-bot
       uses: crazy-max/ghaction-import-gpg@v2
       with:
