@@ -4,8 +4,7 @@
 
 [![](https://img.shields.io/codeclimate/maintainability/kaskadi/template-action?label=maintainability&logo=Code%20Climate)](https://codeclimate.com/github/kaskadi/template-action)
 [![](https://img.shields.io/codeclimate/tech-debt/kaskadi/template-action?label=technical%20debt&logo=Code%20Climate)](https://codeclimate.com/github/kaskadi/template-action)
-<!-- ******** Can uncomment this when your coverage is in place ******** -->
-<!-- [![](https://img.shields.io/codeclimate/coverage/kaskadi/template-action?label=test%20coverage&logo=Code%20Climate)](https://codeclimate.com/github/kaskadi/template-action) -->
+[![](https://img.shields.io/codeclimate/coverage/kaskadi/template-action?label=test%20coverage&logo=Code%20Climate)](https://codeclimate.com/github/kaskadi/template-action)
 
 **LGTM**
 
@@ -29,6 +28,7 @@ You can configure the template used to generate the action documentation [here](
 
 ****
 
+<!-- automatically generated documentation will be placed here -->
 # What is this action for?
 
 template repository to create GitHub Actions
@@ -70,4 +70,5 @@ jobs:
 | :------: | :------: | :------------------------------ |
 |  `env_1` |  `true`  | This is an environment variable |
 
+<!-- automatically generated documentation will be placed here -->
 :point_down: **Here goes any extra details on how to use the action** :point_down:
