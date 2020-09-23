@@ -11,6 +11,8 @@
 
 [![](https://img.shields.io/lgtm/grade/javascript/github/kaskadi/template-action?label=code%20quality&logo=lgtm)](https://lgtm.com/projects/g/kaskadi/template-action/?mode=list)
 
+<!-- You can add badges inside of this section if you'd like -->
+
 ****
 
 # Testing
@@ -31,7 +33,8 @@ You can configure the template used to generate the action documentation [here](
 
 ****
 
-<!-- automatically generated documentation will be placed here -->
+<!-- automatically generated documentation will be placed in here -->
 {{>main}}
-<!-- automatically generated documentation will be placed here -->
-:point_down: **Here goes any extra details on how to use the action** :point_down:
+<!-- automatically generated documentation will be placed in here -->
+
+<!-- You can customize this template as you'd like! -->
