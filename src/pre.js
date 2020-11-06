@@ -16,4 +16,3 @@ if (callingRepo !== actionRepo) {
 } else {
   installDependencies()
 }
-// force
