@@ -24,7 +24,7 @@ When creating a repository from this template, an `init` workflow (see [here](./
 
 A `build` workflow (see [here](./.github/workflows/build.yml)) is running on `pull request` and will execute your test suite before allowing you to merge your PR. It also has a `coverage` job already prepared that you can comment out as soon as your testing is in place and your `REPORTER_ID` is in the repository secrets. This is the ID on _Code Climate_ used for uploading code coverage reports.
 
-Beside running your unit tests, this workflow also runs a static code analysis to find any vulnerability in your code. If a vulnerability is found, the workflow will directly fail and a notification will appear in the `Security` tab of your repository.
+Beside running your unit tests, this workflow also runs a static code analysis to find any vulnerability in your code. If a vulnerability is found, a notification will appear in the `Security` tab of your repository.
 
 **Note:** a `analyze-code` workflow (see [here](./.github/workflows/analyze-code.yml)) is also in charge of performing a static code analysis on `push`. This ensure that vulnerabilities are catched even when pushing hotfixes.
 
